@@ -32,10 +32,11 @@ export default {
       this.msg = res.data
     },
     apiPrivate: async function () {
-      let res = await axios.get('http://localhost:8080/private', {
+      let res = await axios.get('http://localhost:8080/authentication', {
       headers: {'Authorization': `Bearer ${localStorage.getItem('jwt')}`}
       })
-      this.msg = res.data
+      //this.msg = res.data
+      console.log(res)
     }
   }
 }
