@@ -32,7 +32,8 @@ export default {
       this.msg = res.data
     },
     apiPrivate: async function () {
-      let res = await axios.get('http://localhost:8080/authentication', {
+      //let res = await axios.get('http://localhost:8080/authentication', {
+      let res = await axios.get('https://twocloud-peppar-development.appspot.com/authentication', {
       headers: {'Authorization': `Bearer ${localStorage.getItem('jwt')}`}
       })
       //this.msg = res.data
